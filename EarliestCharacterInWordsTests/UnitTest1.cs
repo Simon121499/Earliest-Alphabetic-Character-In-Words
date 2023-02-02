@@ -23,5 +23,22 @@ namespace EarliestCharacterInWordsTests
             // Assert that the sorted words returned from our implemented method is the same as expected words
             CollectionAssert.AreEqual(new List<string> { "snake", "dog", "fox" }, sortedWords);
         }
+
+        [TestMethod]
+        public void SortEarliestWordsInTest2()
+        {
+
+            // Arrange
+            // Words to sort and test with
+            string[] words = { "dog", "snake", "donkey" };
+
+            // Act
+            // Sorted words
+            string[] sortedWords = SortEarliestCharacterInWords.SortWords(words);
+
+            // Assert
+            // Assert that the sorted words returned from our implemented method is the same as expected words
+            CollectionAssert.AreEqual(new List<string> { "snake", "dog", "donkey" }, sortedWords);
+        }
     }
 }
